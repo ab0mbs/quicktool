@@ -3,7 +3,7 @@
 	"name"				"Quicktool Menu"
 	"version"			"1.0"
 	"author_name"			"Sky King"
-	"author_email"			"addons@thelepserver.com"
+	"author_email"			"admin@thelepserver.com"
 	"author_url"			"http://github.com/ab0mbs/quicktool"
 	"info"				"Bind a key like mouse3 to +quicktool"
 	"override"			"0"
