@@ -10,6 +10,7 @@ if CLIENT then
 	local MaxItems = 12
 	local FrameWidth = 192
 	local ItemHeight = 16
+	local toolsList
 
 	-- Add the current toolset to the listbox
 	local function addToolsToListbox(listbox)
@@ -177,7 +178,7 @@ if CLIENT then
 		local toolsListPanelWide = toolsListPanel:GetWide()
 		
 	-- Add tools list
-		local toolsList = vgui.Create("DPanelList", toolsListPanel)
+		toolsList = vgui.Create("DPanelList", toolsListPanel)
 			toolsList:SetSize(10,238)
 			toolsList:SizeToContentsX()
 			toolsList:SetSpacing(2)
@@ -728,8 +729,11 @@ if CLIENT then
 					-- Set the current tool to the preset
 					quicktoolConfigTools = tempToolTable
 
+					toolsList:Clear()
+					
+					addToolsToListbox(toolsList)
 					CalculateMenuLayout()
-
+					saveConfig()
 					saveTools()
 				end
 			end
